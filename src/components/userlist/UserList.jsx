@@ -18,11 +18,14 @@ export default function UserList(props) {
       ))
     
       return (
+          <>
+          <div>Users</div>
           <List 
             items={userItems}
             onClickItem={(id) => { 
                 props.onSelectUser(id);
             }} 
             />
+            </>
       )
 }
