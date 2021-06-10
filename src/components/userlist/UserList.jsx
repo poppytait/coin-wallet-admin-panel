@@ -7,25 +7,25 @@ export default function UserList(props) {
 
     useEffect(() => {
         client.getUsers().then((users) => setUsers(users));
-      }, []);
+    }, []);
 
-      const userItems = users.map(user => (
-          {
-              id: user.id,
-              primary: user.firstName + " " + user.lastName,
-              secondary: user.email,
-          }
-      ))
-    
-      return (
-          <>
-          <div>Users</div>
-          <List 
-            items={userItems}
-            onClickItem={(id) => { 
-                props.onSelectUser(id);
-            }} 
+    const userItems = users.map(user => (
+        {
+            id: user.id,
+            primary: user.firstName + " " + user.lastName,
+            secondary: user.email,
+        }
+    ))
+
+    return (
+        <>
+            <div>Users</div>
+            <List
+                items={userItems}
+                onClickItem={(id) => {
+                    props.onSelectUser(id);
+                }}
             />
-            </>
-      )
+        </>
+    )
 }
