@@ -10,6 +10,8 @@ import TransactionPanel from './components/transactionPanel/TransactionPanel';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    width: '1000px',
+    margin: '0 auto',
   },
   paper: {
     padding: theme.spacing(2),
